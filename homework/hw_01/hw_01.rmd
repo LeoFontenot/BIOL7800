@@ -1,0 +1,20 @@
+---
+title: "hw_01"
+author: "LeoFontenot"
+date: "9/23/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+##### Short Intro
+**Leo** graduated with a BS in chemistry from *Louisiana State University* and worked as a quality control chemist at *Valero Energy* and *REG* before returning to grad school to pursue a meaningful career in research. He is currently studying metabolomics and proteomics of iron-starved bacteria under [Prof. Mario Rivera](https://sites01.lsu.edu/faculty/rivera/) at LSU, where they are striving to validate iron homeostasis as a potential target for antibiotic development.
+
+**git version**
+```{r}
+print (system ("git --version"))
+```
+**R version**
+```{r}
+print (system ("r --version"))
+```
