@@ -1,0 +1,42 @@
+---
+title: "HW_04"
+author: "LeoFontenot"
+date: "10/26/2021"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r}
+library(rvest)
+url <-read_html("https://introdatasci.dlilab.com/schedule_materials/")
+
+SnM_table <- url %>% html_elements("table") |> html_table()
+
+'SMdf' <- as.data.frame(SnM_table)
+
+```
+
+```{r}
+days <-stringi::stri_sub(SMdf[,1], -2)
+days<-as.numeric(days)
+SMdf_new <- cbind(SMdf, days)
+
+month <-stringi::stri_sub(SMdf[,1], from =1, to=3)
+month <-as.factor(month)
+SMdf_new <- cbind(SMdf, month)
+
+```
+
+```{r}
+library(dplyr)
+lec_per_m <- SMdf_new |> group_by(month) |> summarise(month,n=n())|> distinct()|> arrange(month,desc(n))
+
+```
+
+```{r}
+topic <- stringr::str_split(SMdf_new$Topic," ")
+in_words <- unlist(topic)
+top5 <- sort(prop.table(table(in_words)), decreasing = T)
+
+```
