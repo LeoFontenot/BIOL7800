@@ -1,0 +1,77 @@
+---
+title: "hw_03"
+author: "LeoFontenot"
+date: "11/30/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+#1
+```{r}
+set.seed(12) # to be reproducible
+A = matrix(data = runif(n = 1:500), nrow = 50, ncol = 10)
+colnames(A) = paste("lake", 1:10, sep = "_")
+
+print(A)
+
+#using for loop to find mean value for each column
+
+for(i in 1:ncol(A)){
+  print(mean(A[, i]))
+}
+
+#using a vectorized function
+
+colMeans(A)
+
+```
+#2
+```{r}
+x = array(1:27, dim = c(3, 3, 3))
+apply(X = x, MARGIN = c(1, 2), 
+      FUN = paste, collapse = ", ")
+
+# with for loop
+
+y = matrix(0, nrow = 3, ncol = 3)
+y
+for(i in 1:nrow(x)){
+  for(j in 1:ncol(x)){
+    y[i,j] <-paste(x[i, j, ], collapse = ", ")
+  }
+}
+y
+```
+#3
+Fibonacci Sequence using for loop
+```{r}
+Fibonacci <- numeric(30)
+Fibonacci[1] <- Fibonacci[0] <- 1
+for (i in 3:30) Fibonacci[i] <- Fibonacci[i - 2] + Fibonacci[i - 1]
+print("First 30 Fibonacci numbers:")
+print(Fibonacci)
+
+```
+
+#4
+
+```{r}
+top105 = readLines("http://www.textfiles.com/music/ktop100.txt")
+top105 = top105[-c(64, 65)] # missing No. 54 and 55
+top105
+
+x1 <-stringr::str_extract(top105, pattern = "^\\d+\\.\\d?")
+na.omit(x1)
+```
+#5
+
+```{r}
+x2 <- gsub(pattern = "[.]$", replacement = "", x1)
+x2 <- as.numeric(x2)
+
+## numbers that have duplications
+x2[duplicated(x2)]
+```
+
+
