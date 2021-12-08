@@ -1,0 +1,36 @@
+---
+title: "Proposal"
+author: "LeoFontenot"
+date: "9/26/2021"
+output: html_document
+
+#### Title: Probing the Impact of Iron Limitation on the Metabolome of *Pseudomonas aeruginosa*
+
+#### Name: Leo Fontenot
+
+
+
+##### Background
+
+Antibiotic resistant bacteria pose one of the most urgent threats to public health. *Pseudomonas aeruginosa* is a multi-drug resistant pathogen that the World Health Organization (WHO) lists as a bacterium for which new antibiotics are urgently needed. Our research is focused on understanding and validating iron metabolism as a target for antibiotic development.
+
+To induce iron starvation, we are targeting the protein bacterioferritin (BfrB), which is present in bacteria but not in humans. BfrB has a spherical and hollow structure with an outer diameter of 120 Å and an inner diameter of 80 Å, where ≈3,500 iron atoms can be stored in the form of an Fe3+ mineral. BfrB regulates cytosolic iron concentrations by (a) oxidizing Fe2+ and storing Fe3+
+in its internal cavity, and (b) accepting electrons to reduce Fe3+ in the internal cavity and mobilizing Fe2+ to the cytosol. Our lab has obtained promising results with the pathogen *Pseudomonas aeruginosa*, the leading cause of mortality in cystic fibrosis patients. We showed that iron mobilization from BfrB requires interaction with a ferredoxin (Bfd). We also showed that blocking the BfrB:Bfd interaction in P. aeruginosa leads to irreversible iron accumulation in
+BfrB, which leads to dysregulated iron homeostasis and bacterial iron deficiency.
+
+##### Significance
+
+Little is known about the metabolic consequences of inhibiting the BfrB:Bfd interaction. An important tool used for understanding metabolism is the metabolic profiling of cells subjected to a change. Therefore, I aim to profile the metabolic response of iron-starved P. aeruginosa, having induced iron starvation by inhibiting the BfrB:Bfd interaction by genetic intervention.
+
+##### Data Acquisition & Tasks
+
+For this project, I plan to generate my own data by doing the following:
+  
+  1. culture wt and mutant (deleted *bfd* gene) strains of *P.aeruginosa*
+  
+  2. lyse cells to obtain intracellular metabolites
+  
+  3. acquire NMR and/or mass spectral data to identify metabolite changes
+  
+  4. perform multivariate analyses and additional statistics and visual aids to interpret results
+

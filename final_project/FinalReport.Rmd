@@ -1,0 +1,86 @@
+---
+title: "FinalReport"
+author: "LeoFontenot"
+date: "12/8/2021"
+output:
+  html_document: default
+  pdf_document: default
+--- 
+
+#### Title: Probing the Impact of Iron Limitation on the Metabolome of *Pseudomonas aeruginosa*
+
+
+
+##### Background & Significance
+Antibiotic resistant bacteria pose one of the most urgent threats to public health (1). *Pseudomonas aeruginosa* is a multi-drug resistant pathogen that the World Health Organization (WHO) lists as a bacterium for which new antibiotics are urgently needed (1). Our research is focused on understanding and validating iron metabolism as a target for antibiotic development. An important tool used for understanding metabolism is the metabolic profiling of cells subjected to a change. Hence, we have profiled the metabolic response of *P. aeruginosa* to induced iron starvation.
+
+![**Fig.1** BfrB(A) and the schematic representation of electron transfer and release of Fe 2+ from the BfrB cavity.](/Users/leofontenot/Desktop/Bfr.png)
+
+To induce iron starvation, we are targeting the protein bacterioferritin (BfrB), which is present in bacteria but not in humans. BfrB has a spherical and hollow structure with an outer diameter of 120 Å and an inner diameter of 80 Å, where ≈3,500 iron atoms can be stored in the form of an Fe3+ mineral (Fig 1A)(2,3). BfrB regulates cytosolic iron concentrations by (a) oxidizing Fe2+ and storing Fe3+ in its internal cavity, and (b) accepting electrons to reduce Fe3+ in the internal cavity and mobilizing Fe2+ to the cytosol (Fig 1B). Our lab has obtained promising results with the pathogen *Pseudomonas aeruginosa*, the leading cause of mortality in cystic fibrosis patients: We showed that iron mobilization from BfrB requires interaction with a ferredoxin (Bfd). We also showed that blocking the BfrB:Bfd interaction in P. aeruginosa leads to irreversible iron accumulation in BfrB, which leads to dysregulated iron homeostasis and bacterial iron deficiency(3). We have also developed small molecule inhibitors of the BfrB:Bfd complex. These inhibitors block the BfrB:Bfd interaction in P. aeruginosa, which result in nearly irreversible iron accumulation in BfrB and bacterial iron deficiency(4). More recently, we have observed that our small molecule inhibitors are bactericidal to cells embedded in mature biofilms(5).
+
+The goal of my research project is to study the influence of iron limitation in the cytosol on the growth and metabolism of P. aeruginosa. Learning how metabolic pathways are influenced by limiting iron through inhibition of the BfrB:Bfd interaction is helping us understand how iron homeostasis affects broader metabolism. My approach to study the metabolic and proteomic profiles resulting from inhibition of the BfrB:Bfd interaction is enabled by genetic manipulation, having deleted the *bfd* gene in P. aeruginosa (Δ*bfd*), leading to irreversible iron accumulation in BfrB and cytosolic iron deficiency. To begin understanding the consequences of inhibiting the BfrB:Bfd interaction, we compared the proteomic profiles of wt and Δ*bfd* cells cultured in iron-sufficient media. We found that the irreversible accumulation of unusable iron in BfrB leads to acute intracellular iron limitation, even when the cells are in an iron-sufficient environment. Notably, the dysregulation of iron homeostasis caused by cytosolic iron limitation affected broader metabolism including sulfur limitation, phenazine-mediated oxidative stress, suboptimal amino acid synthesis and altered carbon metabolism (7)
+
+To corroborate the findings from the proteomic profiling, I used a targeted metabolomics approach to analyze levels of metabolites affected by cytosolic iron limitation. The proteomic profiles of wt and Δbfd cells showed significant differences in central carbon metabolism, which extended to the synthesis of several amino acids. To analyze intracellular metabolites, I adapted and developed protocols to extract and analyze metabolites by NMR spectroscopy. However, due to the limited sensitivity and limit of detection of NMR, metabolite coverage was low. In order to gain a greater coverage, we used mass spectrometry for detection and quantitation. Herein, an exploratory analysis of the mass spectrometry metabolomics data is presented.
+
+##### Materials & Methods
+###### Strains, Media and Growth Conditions
+Chemicals were purchased from Fisher Scientific (Waltham, MA, USA) unless otherwise stated.
+P. aeruginosa (PA01) was purchased from the University of Washington Genome center (Seattle,
+WA, USA). The PA01-derived strain with an unmarked, in-frame deletion of the bfd gene
+had been prepared previously. All strains were maintained on Pseudomonas Isolation Agar (PIA,
+BD Biosciences, San Jose, CA, USA). Pseudomonas aeruginosa isolation (PI) media was used to culture
+cells. PI media contains 20 g /L peptone, 1.4 g/L MgCl2*6H2O, 10 g/L K2SO4, 25 mg/L irgasan
+(Sigma-Aldrich, St. Louis, MO, USA), and 20 mL/L glycerol, pH 7.0. PI media was supplemented
+with 10 uM iron using a 10 mM stock of (NH4)2Fe(SO4)2 (pH~2.0).
+
+###### Cell Growth and Preparation of Lysate Solution
+Pre-cultures (5 mL) of wild type (wt) and Δ*bfd* *P. aeruginosa* cells were grown in PI media for 12 h
+in 50 mL conical tubes covered with an air-permeable membrane at 37 C and 220 rpm. The cells were
+centrifuged at 4000 rpm for 10 min and the cell pellets washed twice with PI media not supplemented
+with iron. The cell pellets were resuspended in PI media supplemented with 10 uM iron, diluted in
+the same media to an optical density at 600 nm (OD600) = 0.001, and 50 mL of the cell suspension
+was transferred to 250 mL polypropylene Erlenmeyer flasks. The flasks were covered with an air-permeable membrane and incubated for 30 h at 37 C and 230 rpm. A small volume was sampled
+for enumeration of viable cells prior to harvesting the cells by centrifugation (4000 rpm, 15 min and
+4 C). The cell pellets were washed twice with 10 mL of phosphate buffer saline (PBS) and stored at
+20 C overnight. Pseudomonas aeruginosa PAO1 cells (three biological replicates) were cultured and harvested as described above. The harvested cells were resuspended in 1.25 mL of HPLC-grade methanol(OmniSolv), incubated for 30 min at ambient temperature and then centrifuged for 30 min at 4000 rpm and 4 C. The supernatants were transferred to separation funnels containing 1.25 mL of deionized water and then extracted with 2.5 mL of chloroform. The aqueous phase was frozen at 80 C and freeze-dried with the aid of a SpeedVac concentrator (Thermo SAVANT, SPD111V) overnight.
+
+###### Liquid Chromatography Mass Spectrometry
+The metabolites extracted from bacterial cells were quantitated with the aid of liquid chromatography—mass spectrometry. Quantitative analysis was performed using an LC-MS system comprising n Ultimate 3000 LC pump in tandem with an Exactive Plus benchtop Orbitrap mass spectrometer from Thermo Fisher Scientifictime-of-flight mass spectrometer. Samples were separated on a column (Acclaim PepMap 100 (C18), 3 µm, 100 Å). The flow rate was 0.3 µL/min and the gradient consisted of: 15 min: 5–10% ACN in 0.1% formic acid (FA); 45 min: 25% ACN/FA; 50 min: 95% ACN/FA; 10 min: re-equilibration 5% ACN/FA. Electrospray ionization was performed at 2.0 kV and data acquisition in the Orbitrap used an MS2 approach; full scans were acquired with 70,000 resolution.
+
+###### Data Analysis
+
+From the LC-MS analysis, a .csv file was generated with signal responses for each metabolite for every sample. This file was analyzed using MetaboAnalystR, a package designed for metabolomics research. Using the package, signal responses were normalized to cell counts, the data was then Pareto scaled, and heat maps and PLSDA models were generated for the exploratory data analysis.The R script and readout report from the analysis are hosted on GitHub.
+
+##### Results
+Fig.2 is a Partial Least Squares Discriminant Analysis model of the samples used in this study. In the 2D scores plot, we can see clear separation of the two sample classes, wt and Δ*bfd*. This shows that there is some underlying difference in the metabolism of the systems due to inhibiting the BfrB:Bfd interface.
+
+![**Fig.2** 2D Scores Plot for Partial Least Squares Discriminant Analysis of wt and Δ*bfd* bacterial cells harvested at 30h.](/Users/leofontenot/Desktop/pls_score2d_0_dpi72.png)
+
+Fig.3 is a heat map generated from the signal responses of the metabolites. Many metabolites were detected from various classes: amino acid metabolism, glycolysis, lipids, nucleotides, and many other metabolites. Many of the metabolites are of low abundance in the bfd sample, suggesting that inhibiting the Bfrb:Bfd interaction impairs global metabolism.
+
+![**Fig.3** Heat map of metabolites extracted from wt and Δ*bfd* bacterial cells harvested at 30h.The heat map shows the differential abundance of the different metabolites detected in the quantitative LC-MS analysis.](/Users/leofontenot/Desktop/heatmap_15_dpi72.png)
+
+##### Discussion
+The overall coverage of the metabolome was improved. Previously, we used NMR which has limited sensitivity and limit of detection. Because of this, we decided to use liquid chromatography-mass spectrometry to improved detection and quantitation. Using this method, we were able to detect ~70 metabolites. Using exploratory data analysis tools, it was shown that the metabolism of wt and bfd are significantly different, having clustered into two different classes in the PLS-DA model.
+
+The metabolic profile show that dysregulating iron metabolism by blocking the Bfrb:Bfd interaction affects important metabolic pathways, including carbon metabolism, amino acid biosynthesis, and nucleotide metabolism. Central carbon metabolism is shuttled by many iron-containing enzymes(6). Because of low-iron pools, these enzymes are not able to produce the intermediate metabolites to provide energy for the cell. In addition, most amino acids are synthesized from the TCA cycle, which explains why they are abundantly low in the bfd cell.
+
+The heat maps give great insight to what is going on inside of the bacterial cell, but pathway analysis must be done to understand which specific areas of pathways are affected and why. For example, in Fig.3, 2-dehydro-D-gluconate, 2-isopropylmalate, xylitol, and some others are extremely high in the wt cell and very low in the Δ*bfd* cell, driving the statistical separation in the PLS-DA model. Currently, I am unsure of the significance of the metabolites to their respective pathways and how this is influenced by iron limitation.
+
+To conclude, it was shown that inhibiting the BfrB:Bfd interaction elicits a global metabolic response. Additionally, using LC-MS increases the coverage of the global metabolome. Future work must be completed to analyze the pathways to see where they have been affected.
+
+
+
+##### References
+1. https://www.who.int/news-room/detail/27-02-2017-who-publishes-list-of-bacteria-for-which-new-antibiotics-are-urgently-needed 
+2. Rivera, M., Bacterioferritin: Structure, Dynamics and Protein-Protein Interactions at Play in Iron Storage and Mobilization. Acc. Chem. Res. 2017, 50, 331-340.
+
+3. Eshelman, K.; Yao, H.; Punchi Hewage, A. N. D.; Deay, J. J.; Chandler, J. R.; Rivera, M., Inhibiting the BfrB:Bfd Interaction in Pseudomonas aeruginosa Causes Irreversible Iron Accumulation in Bacterioferritin and Iron Deficiency in the Bacterial Cell. Metallocmics 2017, 9, 646-659. 
+
+4. J. Am. Chem. Soc. 2019, 141, 20, 8171–8184
+
+5. ACS Infect. Dis. 2021, 7, 1, 123–140
+
+6. Sasnow, S.S.; Wei, H.; Aristilde, L. Bypasses in intracellular glucose metabolism in iron-limited Pseudomonas putida. Microbiologyopen 2016, 5, 3–20.
+
+7. Pathogens 2020, 9(12), 980; https://doi.org/10.3390/pathogens9120980
