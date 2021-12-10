@@ -1,0 +1,107 @@
+---
+title: "hw_06"
+author: "LeoFontenot"
+date: "12/9/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# 1
+
+## a
+
+```{r}
+x = c(110.5, 105.4, 118.1, 104.5, 93.6, 84.1, 77.8, 75.6)
+y = c(5.755, 5.939, 6.010, 6.545, 6.730, 6.750, 6.899, 7.862)
+my_lm = lm(y ~ x)
+summary(my_lm)
+
+```
+
+The estimate of B1 is `r coef(my_lm)`
+
+## b
+
+```{r}
+anova(my_lm)
+
+summary(my_lm)
+```
+**Since the F statistic is larger than the critical value, we can reject the null hyphothesis**
+
+## c
+
+## d
+
+```{r}
+resid(my_lm)
+```
+**Fitted regression line is Y= 10.137455x -0.037175**
+
+## e
+```{r}
+summary(my_lm)$sigma^2
+```
+
+## f
+```{r}
+predict(my_lm, newdata = data.frame(x=100), interval = "confidence")
+```
+
+## g
+```{r}
+predict(my_lm, newdata = data.frame(x=100), interval = "prediction")
+```
+**The prediction interval is wider than the confidence interval**
+
+## h
+```{r}
+x= summary(my_lm)
+x$r.squared
+```
+**The coefficient of determination is the proportion of the variation in the dependent variable that is predictable from the independent variables. It provides a measure of how well observations are replicated by the model. This coefficient is 0.75 meaning that 75% of the time, predictions match observations.**
+
+
+# 2
+
+```{r}
+x = c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+y = c(-2.08, -0.72, 0.28, 0.92, 1.20, 1.12, 0.68, -0.12, -1.28)
+my_lm2 = lm(y~x)
+
+```
+
+## a
+
+Plot of y ~ x is below
+
+```{r}
+plot(x, y)
+```
+## b
+```{r}
+my_residuals= resid(my_lm2)
+plot(x = x, y = my_residuals)
+```
+## c
+
+```{r}
+my_residuals= resid(my_lm2)
+plot(x = y, y = my_residuals)
+```
+## d
+```{r}
+plot(x = fitted(my_lm2), y = my_residuals)
+```
+
+
+## e
+
+**The plot against y and y-hat are different.When the residuals are plotted against y does not show that the linear regression model is not good.It is better to plot against x or y-hat.**
+
+
+
+
+
+
